@@ -1,23 +1,245 @@
-# Compiled class file
-*.class
+import java.util.Scanner ;
+public class Main {
+    public static void main(String[] args) {
 
-# Log file
-*.log
+        float Fan_Units,Tube_Light_Unit,LED_Bulb_Units,TV_Units,Refigerator_Units,Iron_Unit,Gyser_Unit,Watter_pump_Unit;
+        float Totel_Unit,Electricity_Bill,Month;
+        float Rupees = 5.97f;
 
-# BlueJ files
-*.ctxt
+                 //NAME
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Name ");
+        String Castomer_name = scan1.nextLine();
+        System.out.println("Castomer name : " + Castomer_name);
+                //PHONE NUMBER
+        Scanner scan6 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Mobile.NO ");
+        long Mobile_NO = scan6.nextLong();
+        System.out.println("Castomer Mobile.NO : " +Mobile_NO);
+                  //ADRESS
+        //State
+        Scanner scan2 = new Scanner(System.in);
+        System.out.println("Enter the Castomer State ");
+        String State = scan2.nextLine();
+        System.out.println("Castomer State Name : " + State);
+        //District
+        Scanner scan3 = new Scanner(System.in);
+        System.out.println("Enter the Castomer District ");
+        String District = scan3.nextLine();
+        System.out.println("Castomer District Name : " + District);
+        //Town
+        Scanner scan4 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Area ");
+        String Town = scan4.nextLine();
+        System.out.println("Castomer Vill/Area : " + Town);
+        //Pincode
+        Scanner scan5 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Pincode ");
+        String Pincode = String.valueOf(scan5.hasNextLine());
+        System.out.println("Castomer Pincode : " +Pincode);
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+                //Calculate Electricity Bill
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+                        //Using Dayly Electric Device
+        //Fan
+        Scanner scan7 = new Scanner(System.in) ;
+        System.out.println("Enter the Castomer Fan number ") ;
+        float Fan_Number= scan7.nextFloat() ;
+        System.out.println("Castomer Fan number : " +Fan_Number) ;
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+                //Fan Watts
+        Scanner scanA = new Scanner(System.in) ;
+        System.out.println("Enter the Castomer Fan Watts ") ;
+        float Fan_Watts = scanA.nextFloat() ;
+        System.out.println("Castomer Fan Watts : " +Fan_Watts +"W") ;
+
+                            //Fan Hours
+        Scanner scani = new Scanner(System.in) ;
+        System.out.println("Enter the Castomer Fan How long its going ") ;
+        float Fan_Hours= scani.nextFloat() ;
+        System.out.println("Castomer Fan Using Hours : " +Fan_Hours +"H") ;
+
+        //Fan Units
+        Fan_Units= ((Fan_Number*Fan_Watts*Fan_Hours)/1000) ;
+        System.out.println("CASTOMAR FAN using UNITS : " +Fan_Units +"unit") ;
+
+
+        //Tube Light
+        Scanner scan8 = new Scanner(System.in);
+        System.out.println("Enter the Castomer  Tube Light Number");
+        float Tube_light_number = scan8.nextFloat();
+        System.out.println("Castomer Tube light  Number: " +Tube_light_number);
+
+                    //Tube Light Watts
+        Scanner scanB = new Scanner(System.in);
+        System.out.println("Enter the Castomer  Tube Light Watts");
+        float Tube_light_watts = scanB.nextFloat();
+        System.out.println("Castomer Tube light Watts : " +Tube_light_watts +"W");
+
+                            //Tube Light Hours
+        Scanner scanii = new Scanner(System.in);
+        System.out.println("Enter the Castomer  Tube Light How long its going");
+        float Tube_light_Hours = scanii.nextFloat();
+        System.out.println("Castomer Tube light Using Hours : " +Tube_light_Hours +"H");
+
+                                            //Tube Lights Units
+        Tube_Light_Unit = ((Tube_light_number*Tube_light_Hours*Tube_light_watts)/1000) ;
+        System.out.println("Castomer Tube light using Units : " +Tube_Light_Unit +"units") ;
+
+
+        //LED Bulb
+        Scanner scan9 = new Scanner(System.in);
+        System.out.println("Enter the Castomer LED Bulb Number");
+        float LED_Bulb_Number= scan9.nextFloat();
+        System.out.println("Castomer LED Bulb Number : " +LED_Bulb_Number);
+
+                  //LED Bulb Watts
+        Scanner scanC = new Scanner(System.in);
+        System.out.println("Enter the Castomer LED Bulb Watts");
+        float LED_Bulb_Watts = scanC.nextFloat();
+        System.out.println("Castomer LED Bulb Watts : " +LED_Bulb_Watts +"W");
+
+
+                            //LED Bulb Hours
+        Scanner scaniii = new Scanner(System.in);
+        System.out.println("Enter the Castomer LED Bulb How long its going");
+        float LED_Bulb_Hours = scaniii.nextFloat();
+        System.out.println("Castomer LED Bulb Using Hours : " +LED_Bulb_Hours +"H");
+
+                                        //LED Bulb Units
+        LED_Bulb_Units =((LED_Bulb_Number*LED_Bulb_Watts*LED_Bulb_Hours)/1000) ;
+        System.out.println("Castomer LED Bulb Using Units : " + LED_Bulb_Units + "units") ;
+
+
+        //TV
+        Scanner scan10 = new Scanner(System.in);
+        System.out.println("Enter the Castomer TV number ");
+        float TV_Number = scan10.nextFloat();
+        System.out.println("Castomer TV number: " +TV_Number);
+
+                //TV Watts
+        Scanner scanD = new Scanner(System.in);
+        System.out.println("Enter the Castomer TV Watts ");
+        float TV_Watts = scanD.nextFloat();
+        System.out.println("Castomer TV Watts: " +TV_Watts +"W");
+
+                    //TV Hours
+        Scanner scaniv = new Scanner(System.in) ;
+        System.out.println("Enter the Castomer TV How long its going ") ;
+        float TV_Hours = scaniv.nextFloat() ;
+        System.out.println("Castomer TV Using Hours: "+ TV_Hours +"H") ;
+
+                                  //TV Units
+        TV_Units = ((TV_Number*TV_Hours*TV_Watts)/1000);
+        System.out.println("Castomer LED Bulb Using Units : " +TV_Units +"units");
+
+
+
+        //Refigerator
+        Scanner scan11 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Refigerator Number ");
+        float Refigerator_Number = scan11.nextFloat();
+        System.out.println("Castomer Refigerater number : " +Refigerator_Number);
+
+                //Refigerator Watts
+        Scanner scanE = new Scanner(System.in);
+        System.out.println("Enter the Castomer Refigerator Watts ");
+        float Refigerator_Watts = scanE.nextFloat();
+        System.out.println("Castomer Refigerater Watts : " +Refigerator_Watts + "W");
+
+                            //Refigerator Hours
+        Scanner scanv = new Scanner(System.in);
+        System.out.println("Enter the Castomer Refigerator How long its going");
+        float Refigerator_Hours = scanv.nextFloat();
+        System.out.println("Castomer Refigerater Using Hours : " +Refigerator_Hours +"H");
+
+                                                        //Refigerator Units
+        Refigerator_Units = ((Refigerator_Number*Refigerator_Hours*Refigerator_Watts)/1000);
+        System.out.println("Castomer Refigerater Using Units : " +Refigerator_Units + "units");
+
+
+
+        //Iron
+        Scanner scan12 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Iron Number ");
+        float Iron_Number = scan12.nextFloat();
+        System.out.println("Castomer Iron Number : " +Iron_Number);
+
+                //Iron Watts
+        Scanner scanF = new Scanner(System.in);
+        System.out.println("Enter the Castomer Iron Watts ");
+        float Iron_Watts = scanF.nextFloat();
+        System.out.println("Castomer Iron Watts : " +Iron_Watts +"W");
+
+                    //Iron Hours
+        Scanner scanvi = new Scanner(System.in);
+        System.out.println("Enter the Castomer Iron How long its going ");
+        float Iron_Hours = scanvi.nextFloat();
+        System.out.println("Castomer Iron Using Hours : " +Iron_Hours +"H");
+
+                            //Iron Unit
+        Iron_Unit = ((Iron_Number*Iron_Hours*Iron_Watts)/1000);
+        System.out.println("Castomer Iron Using Hours : " +Iron_Unit +"units");
+
+
+        //Gyser
+        Scanner scan13 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Gyser Number ");
+        float Gyser_Number  = scan13.nextFloat();
+        System.out.println("Castomer Gyser Number : " +Gyser_Number);
+
+                //Gyser Watts
+        Scanner scanG = new Scanner(System.in);
+        System.out.println("Enter the Castomer Gyser Watts ");
+        float Gyser_Watts  = scanG.nextFloat();
+        System.out.println("Castomer Gyser watts : " +Gyser_Watts +"W");
+
+                            //Gyser Hours
+        Scanner scanvii = new Scanner(System.in);
+        System.out.println("Enter the Castomer Gyser How long its going ");
+        float Gyser_Hours  = scanvii.nextFloat();
+        System.out.println("Castomer Gyser Using Hours : " +Gyser_Hours +"H");
+
+                                                //Gyser Unit
+        Gyser_Unit = ((Gyser_Number*Gyser_Hours*Gyser_Watts)/1000);
+        System.out.println("Castomer Gyser Using Hours : " +Gyser_Unit +"unit");
+
+        //Watter pump
+        Scanner scan14 = new Scanner(System.in);
+        System.out.println("Enter the Castomer Watter pump Number ");
+        float Wattter_pump_Number = scan14.nextFloat();
+        System.out.println("Castomer watter pump Number : " +Wattter_pump_Number);
+
+                //Watter pump Watts
+        Scanner scanH = new Scanner(System.in);
+        System.out.println("Enter the Castomer Watter pump Watts ");
+        float Wattter_pump_Watts= scanH.nextFloat();
+        System.out.println("Castomer watter pump Watts : " +Wattter_pump_Watts +"W");
+
+                        //Watter pump Hours
+        Scanner scanviii = new Scanner(System.in);
+        System.out.println("Enter the Castomer Watter pump How long its going ");
+        float Watter_pump_Hours = scanviii.nextFloat();
+        System.out.println("Castomer watter pump Using Hours : " +Watter_pump_Hours +"H");
+
+                                    //Watter pump Unit
+        Watter_pump_Unit = ((Wattter_pump_Number*Watter_pump_Hours*Wattter_pump_Watts)/1000);
+        System.out.println("Castomer watter pump Using Units : " +Watter_pump_Unit +"Unit") ;
+
+
+
+                                     //Total Units
+        Totel_Unit = Fan_Units + Tube_light_number + LED_Bulb_Units + TV_Units + Refigerator_Units + Iron_Unit + Gyser_Unit + Watter_pump_Unit ;
+        System.out.println("Using Total Units  : " +Totel_Unit +"units");
+
+                                    //Mounth Number
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Month Number ");
+        Month = scan.nextFloat();
+        System.out.println("Month Number : " + Month);
+
+                             // Totel  Electricity Bill  in One Month
+        Electricity_Bill = (Totel_Unit*30*Rupees*Month);
+        System.out.println("Total Electricity Bill : " +Electricity_Bill + "Rupees") ;
+
+    }
